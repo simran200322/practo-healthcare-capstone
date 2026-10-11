@@ -1,0 +1,48 @@
+{
+  "conversation_id": "session-multi-turn-101",
+  "message_count": 6,
+  "history": [
+    {
+      "timestamp": 1791719340.019943,
+      "role": "user",
+      "content": "Hello, what is the policy for booking home visits?",
+      "metadata": {}
+    },
+    {
+      "timestamp": 1791719340.0518625,
+      "role": "assistant",
+      "content": "Based on Practo clinic policy (Home Visit and Specimen Collection Eligibility): Home visits must be booked at least 24 hours in advance through customer care or the Practo mobile app.",
+      "metadata": {
+        "trace_id": "trace-d3c3ba7b"
+      }
+    },
+    {
+      "timestamp": 1791719340.1031725,
+      "role": "user",
+      "content": "Also, can you look up appointment APP-0002 for me?",
+      "metadata": {}
+    },
+    {
+      "timestamp": 1791719340.1325893,
+      "role": "assistant",
+      "content": "Appointment APP-0002 is currently 'Cancelled' in Pediatrics. Consultation fee: INR 800. Follow-up required: False. Escalation score: 0.03 (ROUTINE).",
+      "metadata": {
+        "trace_id": "trace-eb862fc4"
+      }
+    },
+    {
+      "timestamp": 1791719340.2933989,
+      "role": "user",
+      "content": "What was the discount policy again for follow-up visits?",
+      "metadata": {}
+    },
+    {
+      "timestamp": 1791719340.3162155,
+      "role": "assistant",
+      "content": "Based on Practo clinic policy (Follow-Up Visit Discount Policy): To qualify for the discount, the follow-up must be scheduled with the same specialist and clinic branch for the same clinical episode. Patients requiring a clinical re-evaluation within seven calendar days of their initial consultation receive a fifty percent discount on the standard consultation fee.",
+      "metadata": {
+        "trace_id": "trace-446f714f"
+      }
+    }
+  ]
+}

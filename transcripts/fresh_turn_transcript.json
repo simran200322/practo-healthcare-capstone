@@ -1,0 +1,20 @@
+{
+  "conversation_id": "session-fresh-turn-202",
+  "message_count": 2,
+  "history": [
+    {
+      "timestamp": 1791719340.3633716,
+      "role": "user",
+      "content": "Can you check status of APP-0004?",
+      "metadata": {}
+    },
+    {
+      "timestamp": 1791719340.3981118,
+      "role": "assistant",
+      "content": "Appointment APP-0004 is currently 'Cancelled' in Dermatology. Consultation fee: INR 1200. Follow-up required: False. Escalation score: 0.23 (ROUTINE).",
+      "metadata": {
+        "trace_id": "trace-63ad7029"
+      }
+    }
+  ]
+}

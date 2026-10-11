@@ -1,0 +1,137 @@
+{
+  "calibrated_threshold": 0.3757,
+  "in_scope_cluster": {
+    "min": 0.5919,
+    "max": 0.7313,
+    "mean": 0.6616
+  },
+  "oos_cluster": {
+    "min": 0.0929,
+    "max": 0.1595,
+    "mean": 0.1262
+  },
+  "margin": 0.4324,
+  "measurements": [
+    {
+      "id": "IN-01",
+      "type": "in-scope",
+      "query": "How much is the consultation fee for a Cardiologist?",
+      "top_1_similarity": 0.5919,
+      "matched_title": "Follow-Up Visit Discount Policy",
+      "matched_text": "Follow-up appointments scheduled after the seven-day window are billed at the full specialty consultation fee."
+    },
+    {
+      "id": "IN-02",
+      "type": "in-scope",
+      "query": "Can I cancel my appointment one hour before without penalty?",
+      "top_1_similarity": 0.7313,
+      "matched_title": "Cancellation and Rescheduling Window Policy",
+      "matched_text": "Appointments can be rescheduled or cancelled without fee penalties up to two hours prior to the scheduled consultation time."
+    },
+    {
+      "id": "IN-03",
+      "type": "in-scope",
+      "query": "How long does it take to get diagnostic blood test results back?",
+      "top_1_similarity": 0.6559,
+      "matched_title": "Diagnostic Lab Test Turnaround Times",
+      "matched_text": "Routine diagnostic blood tests, complete hemograms, and urinalysis results are published to the patient portal within 12 to 24 hours of sample collection."
+    },
+    {
+      "id": "IN-04",
+      "type": "in-scope",
+      "query": "What is the discount policy for follow-up doctor visits?",
+      "top_1_similarity": 0.6738,
+      "matched_title": "Follow-Up Visit Discount Policy",
+      "matched_text": "To qualify for the discount, the follow-up must be scheduled with the same specialist and clinic branch for the same clinical episode."
+    },
+    {
+      "id": "IN-05",
+      "type": "in-scope",
+      "query": "Are acute chest pain emergencies eligible for video telemedicine?",
+      "top_1_similarity": 0.6552,
+      "matched_title": "Telemedicine Consultation Eligibility",
+      "matched_text": "Telemedicine video consultations are available for non-emergency primary care, chronic illness maintenance, review of diagnostic reports, and routine follow-ups."
+    },
+    {
+      "id": "OOS-01",
+      "type": "out-of-scope",
+      "query": "What was the stock market closing price of Apple on NASDAQ yesterday?",
+      "top_1_similarity": 0.1595,
+      "matched_title": "Cancellation and Rescheduling Window Policy",
+      "matched_text": "Cancellations made within two hours of the appointment window incur a late-cancellation fee equal to twenty percent of the consultation fee."
+    },
+    {
+      "id": "OOS-02",
+      "type": "out-of-scope",
+      "query": "What is the best culinary recipe for baking chocolate chip cookies at home?",
+      "top_1_similarity": 0.0929,
+      "matched_title": "Home Visit and Specimen Collection Eligibility",
+      "matched_text": "Home visits must be booked at least 24 hours in advance through customer care or the Practo mobile app."
+    }
+  ],
+  "demo_runs": [
+    {
+      "id": "IN-01",
+      "query": "How much is the consultation fee for a Cardiologist?",
+      "type": "in-scope",
+      "top_similarity": 0.5919,
+      "grounded": true,
+      "is_fallback": false,
+      "answer": "Based on Practo clinic policy (Follow-Up Visit Discount Policy): Follow-up appointments scheduled after the seven-day window are billed at the full specialty consultation fee. Patients requiring a clinical re-evaluation within seven calendar days of their initial consultation receive a fifty percent discount on the standard consultation fee."
+    },
+    {
+      "id": "IN-02",
+      "query": "Can I cancel my appointment one hour before without penalty?",
+      "type": "in-scope",
+      "top_similarity": 0.7313,
+      "grounded": true,
+      "is_fallback": false,
+      "answer": "Based on Practo clinic policy (Cancellation and Rescheduling Window Policy): Appointments can be rescheduled or cancelled without fee penalties up to two hours prior to the scheduled consultation time. Cancellations made within two hours of the appointment window incur a late-cancellation fee equal to twenty percent of the consultation fee."
+    },
+    {
+      "id": "IN-03",
+      "query": "How long does it take to get diagnostic blood test results back?",
+      "type": "in-scope",
+      "top_similarity": 0.6559,
+      "grounded": true,
+      "is_fallback": false,
+      "answer": "Based on Practo clinic policy (Diagnostic Lab Test Turnaround Times): Routine diagnostic blood tests, complete hemograms, and urinalysis results are published to the patient portal within 12 to 24 hours of sample collection. Specialized pathology, microbiological cultures, and hormonal assays require 48 to 72 hours for comprehensive diagnostic verification."
+    },
+    {
+      "id": "IN-04",
+      "query": "What is the discount policy for follow-up doctor visits?",
+      "type": "in-scope",
+      "top_similarity": 0.6738,
+      "grounded": true,
+      "is_fallback": false,
+      "answer": "Based on Practo clinic policy (Follow-Up Visit Discount Policy): To qualify for the discount, the follow-up must be scheduled with the same specialist and clinic branch for the same clinical episode. Follow-up appointments scheduled after the seven-day window are billed at the full specialty consultation fee."
+    },
+    {
+      "id": "IN-05",
+      "query": "Are acute chest pain emergencies eligible for video telemedicine?",
+      "type": "in-scope",
+      "top_similarity": 0.6552,
+      "grounded": true,
+      "is_fallback": false,
+      "answer": "Based on Practo clinic policy (Telemedicine Consultation Eligibility): Telemedicine video consultations are available for non-emergency primary care, chronic illness maintenance, review of diagnostic reports, and routine follow-ups. Acute conditions including severe chest pain, shortness of breath, active trauma, or sudden neurological deficits are strictly ineligible for remote consultations."
+    },
+    {
+      "id": "OOS-01",
+      "query": "What was the stock market closing price of Apple on NASDAQ yesterday?",
+      "type": "out-of-scope",
+      "top_similarity": 0.1595,
+      "grounded": false,
+      "is_fallback": true,
+      "answer": "I do not have sufficient verified clinic policy information to answer your inquiry. Please contact clinic reception or Practo patient support directly."
+    },
+    {
+      "id": "OOS-02",
+      "query": "What is the best culinary recipe for baking chocolate chip cookies at home?",
+      "type": "out-of-scope",
+      "top_similarity": 0.0929,
+      "grounded": false,
+      "is_fallback": true,
+      "answer": "I do not have sufficient verified clinic policy information to answer your inquiry. Please contact clinic reception or Practo patient support directly."
+    }
+  ]
+}

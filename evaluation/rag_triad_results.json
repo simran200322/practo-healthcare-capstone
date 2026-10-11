@@ -1,0 +1,251 @@
+{
+  "total_queries": 15,
+  "rubric_description": "Deterministic MOCK_LLM judge scoring Context Relevance (alignment between query topic and retrieved chunk ID), Groundedness (verification that generated statements are strictly sourced from retrieved context without hallucinations), and Answer Relevance (direct satisfaction of user question or compliant safety refusal).",
+  "averages": {
+    "context_relevance": 0.8467,
+    "groundedness": 1.0,
+    "answer_relevance": 1.0
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "topic": "appointment-booking policy",
+      "query": "How many days in advance can I book an outpatient appointment at a Practo clinic?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-001",
+      "top_similarity": 0.821,
+      "matched_title": "Appointment Booking Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Appointment Booking Policy): Patients can book outpatient consultations through the Practo online portal or partner clinic reception desks up to 30 days in advance.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q02",
+      "topic": "cancellation/rescheduling window",
+      "query": "What is the penalty if I cancel an appointment one hour before the consultation?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-002",
+      "top_similarity": 0.8149,
+      "matched_title": "Cancellation and Rescheduling Window Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Cancellation and Rescheduling Window Policy): Appointments can be rescheduled or cancelled without fee penalties up to two hours prior to the scheduled consultation time. Cancellations made within two hours of the appointment window incur a late-cancellation fee equal to twenty percent of the consultation fee.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q03",
+      "topic": "consultation-fee structure by specialty",
+      "query": "What is the consultation fee range for General Medicine and Cardiology?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-003",
+      "top_similarity": 0.5965,
+      "matched_title": "Consultation Fee Structure by Specialty",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Consultation Fee Structure by Specialty): Consultation charges vary across specialties based on clinical tier and doctor seniority across Practo partner clinics. Surgical and advanced specialties such as Orthopedics range from INR 800 to INR 1500, while Cardiology consultations range from INR 1000 to INR 2000.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q04",
+      "topic": "insurance-claim process",
+      "query": "Can I make cashless insurance claims at all clinic branches?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-004",
+      "top_similarity": 0.7473,
+      "matched_title": "Insurance Claim and Reimbursement Process",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Insurance Claim and Reimbursement Process): Cashless insurance claims are supported exclusively at network-empanelled clinics for eligible pre-approved outpatient procedures and consultations. For non-network clinics, patients can download itemized invoices, payment receipts, and signed medical diagnosis summaries from the Practo dashboard within 24 hours to file reimbursement claims directly with their insurer.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q05",
+      "topic": "prescription-refill policy",
+      "query": "Can schedule H prescription medications be auto-refilled online?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-005",
+      "top_similarity": 0.7927,
+      "matched_title": "Prescription Refill Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Prescription Refill Policy): Prescriptions containing schedule H or controlled substances require an in-person or video follow-up assessment and cannot be auto-refilled. Prescription refills for chronic medication can be requested digitally through the portal within 90 days of the latest doctor consultation.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q06",
+      "topic": "lab-test turnaround times",
+      "query": "What is the turnaround time for routine blood tests and hemograms?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-006",
+      "top_similarity": 0.6539,
+      "matched_title": "Diagnostic Lab Test Turnaround Times",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Diagnostic Lab Test Turnaround Times): Routine diagnostic blood tests, complete hemograms, and urinalysis results are published to the patient portal within 12 to 24 hours of sample collection. Specialized pathology, microbiological cultures, and hormonal assays require 48 to 72 hours for comprehensive diagnostic verification.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q07",
+      "topic": "telemedicine eligibility",
+      "query": "Are severe acute chest pain symptoms eligible for online video consultations?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-007",
+      "top_similarity": 0.6649,
+      "matched_title": "Telemedicine Consultation Eligibility",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Telemedicine Consultation Eligibility): Acute conditions including severe chest pain, shortness of breath, active trauma, or sudden neurological deficits are strictly ineligible for remote consultations. Telemedicine video consultations are available for non-emergency primary care, chronic illness maintenance, review of diagnostic reports, and routine follow-ups.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q08",
+      "topic": "emergency-visit protocol",
+      "query": "Can clinic chat agents handle acute life-threatening medical emergencies?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-008",
+      "top_similarity": 0.6394,
+      "matched_title": "Emergency Visit and Triage Protocol",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Emergency Visit and Triage Protocol): Practo clinic support agents and chat assistants are strictly prohibited from managing acute or life-threatening medical emergencies. Clinic desks cannot guarantee emergency triage and will redirect emergency walk-ins to affiliated trauma centers.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q09",
+      "topic": "patient-data privacy policy",
+      "query": "How is patient medical record data encrypted and protected from advertisers?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-009",
+      "top_similarity": 0.6306,
+      "matched_title": "Patient Data Privacy and Security Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Patient Data Privacy and Security Policy): Patient electronic medical records, appointment logs, and clinical attachments are stored using AES-256 encryption at rest and TLS-1.3 during network transmission. Access to medical data is restricted strictly to treating medical personnel and authorized administrative staff under role-based access control.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q10",
+      "topic": "follow-up-visit discount policy",
+      "query": "Is there a discount if I return for a follow-up visit within seven days?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-010",
+      "top_similarity": 0.5169,
+      "matched_title": "Follow-Up Visit Discount Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Follow-Up Visit Discount Policy): Patients requiring a clinical re-evaluation within seven calendar days of their initial consultation receive a fifty percent discount on the standard consultation fee. Follow-up appointments scheduled after the seven-day window are billed at the full specialty consultation fee.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q11",
+      "topic": "second-opinion process",
+      "query": "How does the specialist second opinion review process work for existing diagnostic reports?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-011",
+      "top_similarity": 0.684,
+      "matched_title": "Specialist Second Opinion Process",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Specialist Second Opinion Process): Patients seeking an independent second clinical opinion can upload their existing diagnostic imaging, lab reports, and doctor notes to the Practo Second Opinion desk. A senior board-certified specialist reviews all submitted documentation and delivers a structured independent evaluation report within 48 to 72 hours.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q12",
+      "topic": "home-visit eligibility",
+      "query": "Who is eligible to request home-visit doctor consultations and specimen collections?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-012",
+      "top_similarity": 0.6759,
+      "matched_title": "Home Visit and Specimen Collection Eligibility",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Home Visit and Specimen Collection Eligibility): Home-visit doctor consultations and phlebotomy sample collections are available for bedridden patients, elderly seniors, and post-operative mobility-impaired individuals within designated municipal zones.",
+      "scores": {
+        "context_relevance": 1.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q13",
+      "topic": "edge-case boundary",
+      "query": "Can I book an appointment 60 days in advance and get an automatic prescription refill?",
+      "is_in_scope": true,
+      "expected_doc_id": "KB-DOC-001",
+      "top_similarity": 0.7331,
+      "matched_title": "Prescription Refill Policy",
+      "is_fallback": false,
+      "generated_answer": "Based on Practo clinic policy (Prescription Refill Policy): Prescription refills for chronic medication can be requested digitally through the portal within 90 days of the latest doctor consultation. Prescriptions containing schedule H or controlled substances require an in-person or video follow-up assessment and cannot be auto-refilled.",
+      "scores": {
+        "context_relevance": 0.7,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q14",
+      "topic": "out-of-scope finance",
+      "query": "What was the stock closing price of Microsoft and Tesla on NASDAQ yesterday?",
+      "is_in_scope": false,
+      "expected_doc_id": null,
+      "top_similarity": 0.2027,
+      "matched_title": "Cancellation and Rescheduling Window Policy",
+      "is_fallback": true,
+      "generated_answer": "I do not have sufficient verified clinic policy information to answer your inquiry. Please contact clinic reception or Practo patient support directly.",
+      "scores": {
+        "context_relevance": 0.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    },
+    {
+      "id": "Q15",
+      "topic": "out-of-scope cooking",
+      "query": "What is the best recipe and oven baking temperature for homemade chocolate chip cookies?",
+      "is_in_scope": false,
+      "expected_doc_id": null,
+      "top_similarity": 0.0809,
+      "matched_title": "Patient Data Privacy and Security Policy",
+      "is_fallback": true,
+      "generated_answer": "I do not have sufficient verified clinic policy information to answer your inquiry. Please contact clinic reception or Practo patient support directly.",
+      "scores": {
+        "context_relevance": 0.0,
+        "groundedness": 1.0,
+        "answer_relevance": 1.0
+      }
+    }
+  ]
+}

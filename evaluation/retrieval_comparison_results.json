@@ -1,0 +1,185 @@
+{
+  "fixed_size_strategy": {
+    "strategy": "Fixed-Size Chunks with Overlap",
+    "collection": "practo_policies_fixed",
+    "queries": [
+      {
+        "query_id": "Q1",
+        "query": "How much is the consultation fee for a Cardiologist?",
+        "ground_truth": [
+          "KB-DOC-010",
+          "KB-DOC-003"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-003",
+          "KB-DOC-010"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-003",
+          "KB-DOC-010"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q2",
+        "query": "Can I cancel my appointment one hour before without penalty?",
+        "ground_truth": [
+          "KB-DOC-002"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-002",
+          "KB-DOC-010"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-002"
+        ],
+        "precision_at_3": 0.5,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q3",
+        "query": "How long does it take to get diagnostic blood test results back?",
+        "ground_truth": [
+          "KB-DOC-006"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-006",
+          "KB-DOC-010"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-006"
+        ],
+        "precision_at_3": 0.5,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q4",
+        "query": "What is the discount policy for follow-up doctor visits?",
+        "ground_truth": [
+          "KB-DOC-010"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-010"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-010"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q5",
+        "query": "Are acute chest pain emergencies eligible for video telemedicine?",
+        "ground_truth": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      }
+    ],
+    "mean_precision_at_3": 0.8,
+    "mean_recall_at_3": 1.0
+  },
+  "sentence_based_strategy": {
+    "strategy": "Sentence-Based Semantic Chunks",
+    "collection": "practo_policies_sentence",
+    "queries": [
+      {
+        "query_id": "Q1",
+        "query": "How much is the consultation fee for a Cardiologist?",
+        "ground_truth": [
+          "KB-DOC-010",
+          "KB-DOC-003"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-010",
+          "KB-DOC-003"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-010",
+          "KB-DOC-003"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q2",
+        "query": "Can I cancel my appointment one hour before without penalty?",
+        "ground_truth": [
+          "KB-DOC-002"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-002"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-002"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q3",
+        "query": "How long does it take to get diagnostic blood test results back?",
+        "ground_truth": [
+          "KB-DOC-006"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-006",
+          "KB-DOC-010"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-006"
+        ],
+        "precision_at_3": 0.5,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q4",
+        "query": "What is the discount policy for follow-up doctor visits?",
+        "ground_truth": [
+          "KB-DOC-010"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-010",
+          "KB-DOC-001"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-010"
+        ],
+        "precision_at_3": 0.5,
+        "recall_at_3": 1.0
+      },
+      {
+        "query_id": "Q5",
+        "query": "Are acute chest pain emergencies eligible for video telemedicine?",
+        "ground_truth": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "retrieved_unique_docs": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "relevant_retrieved": [
+          "KB-DOC-007",
+          "KB-DOC-008"
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 1.0
+      }
+    ],
+    "mean_precision_at_3": 0.8,
+    "mean_recall_at_3": 1.0
+  },
+  "recommendation": "We recommend deploying the Sentence-Based Chunking strategy. In empirical evaluation across the 5 representative policy queries, Sentence-Based chunking achieved a Mean Precision@3 of 0.8000 and Mean Recall@3 of 1.0000, compared to 0.8000 Precision@3 and 1.0000 Recall@3 for Fixed-Size chunking. Sentence-based boundaries eliminate cross-sentence arbitrary truncation, preserving atomic clinical rules and maximizing semantic relevance per retrieved chunk."
+}

@@ -1,0 +1,30 @@
+# Python Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# ChromaDB & Vector Embeddings Storage (can be generated deterministically)
+data/chroma_fixed/
+data/chroma_sentence/
+data/checkpoints.sqlite*
+
+# Logs & Transcripts (runtime generated)
+logs/
+*.log
+*.jsonl
+
+# Environment & Credentials
+.env
+.env.local
+
+# OS Specific
+.DS_Store
+Thumbs.db
